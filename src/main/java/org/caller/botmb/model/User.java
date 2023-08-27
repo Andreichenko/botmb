@@ -18,6 +18,9 @@ public class User {
     private int points;
     private Date lastAttackDate;
 
+    public User() {
+    }
+
     public Long getId() {
         return id;
     }

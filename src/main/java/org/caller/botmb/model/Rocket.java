@@ -17,6 +17,7 @@ public class Rocket {
     private double maxPower;
     private double accuracy;
     private double cost;
+    private double power;
 
     public Rocket() {
     }
@@ -67,6 +68,14 @@ public class Rocket {
 
     public void setCost(double cost) {
         this.cost = cost;
+    }
+
+    public double getPower() {
+        return power;
+    }
+
+    public void setPower(double power) {
+        this.power = power;
     }
 
     @Override

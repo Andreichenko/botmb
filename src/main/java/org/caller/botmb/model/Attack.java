@@ -12,10 +12,16 @@ public class Attack {
     private Long id;
 
     @ManyToOne
+    @JoinColumn(name = "user_id")
     private User user;
 
     @ManyToOne
     private City city;
+
+    @ManyToOne
+    @JoinColumn(name = "attacker_id")
+    private User attacker;
+
 
     private double power;
     private double damage;
@@ -79,6 +85,14 @@ public class Attack {
 
     public void setAttackDate(Date attackDate) {
         this.attackDate = attackDate;
+    }
+
+    public User getAttacker() {
+        return attacker;
+    }
+
+    public void setAttacker(User attacker) {
+        this.attacker = attacker;
     }
 
     @Override
